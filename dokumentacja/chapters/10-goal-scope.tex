@@ -1,0 +1,30 @@
+\clearpage
+\chapter{Cel i zakres pracy}
+\section{Cel pracy}
+\customnormalsize{
+Celem pracy jest usprawnienie procesu konsultacji poprzez zwiększenie dostępności oraz ułatwienie procesu planowania i komunikacji. Niezbędne do tego jest stworzenie rozwiązania do planowwania, tworzenia terminów konsultacji oraz możliwości zapisu na te konsultacje. Wszystko to celem zwwiększenia dostępności konsultacji oraz zachęcenia studentów do korzystania z takich możliwości.
+}
+\customlarge{\section{Zakres pracy}}
+\customnormalsize{
+Zakres pracy zakłada:
+\begin{enumerate}
+    \item Implementację interfejsu użytkownika (UI)
+    \item Utworzenie serwerowej części aplikacji przy użyciu Node.js
+    \begin{itemize}
+        \item Utworzenie interfejsów API do komunikacji pomiędzy serwerem a interfejsem użytkownika oraz bazą danych
+        \item Wdrożenie operacji związanych z uprawnieniami użytkowników oraz autentykacją
+        \item Implementacja mechanizmów uwierzytelniania i autoryzacji przy użyciu JWT (JSON Web Token)
+        \item Zabezpieczenie aplikacji przed atakami typu Cross-Site Scripting (XSS)
+    \end{itemize}
+    \item Zaprojektowanie oraz stworzenie bazy danych przechowywującej informację o studentach, prowadzących oraz terminach konsultacji
+    \begin{itemize}
+        \item Tworzenie zapytań korzystając z ORM celem zmniejszenie obciążenia serwera bazodanowego
+        \item Zabazpieczenie aplikacji przed atakami typu SQL Injection
+    \end{itemize}
+    \item Optymalizację operacji
+    \begin{itemize}
+        \item Wykorzystanie mechanizmów cache'owania danych celem zmniejszenia czasu ładowania stron
+    \end{itemize}
+    
+\end{enumerate}
+}

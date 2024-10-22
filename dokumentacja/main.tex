@@ -1,0 +1,49 @@
+\documentclass[12pt,a4paper, twoside]{report}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{titlesec}
+\usepackage{lipsum}
+\usepackage{polyglossia}
+\setdefaultlanguage{polish}
+\usepackage{polski}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\usepackage[authordate, backend=biber, uniquename=false, mincitenames=1, maxcitenames=2, citetracker]{biblatex-chicago}
+\addbibresource{references.bib}
+
+\DefineBibliographyStrings{polish}{
+    andothers = {i in.}, % Zmiana "i inni na "i in."
+    and = {i},           % Zmiana "and" na "i"
+}
+
+\makeatletter
+% Ustaw maxnames na 2, aby przy drugim wystąpieniu cytatu z dwoma autorami nie był on skracany
+\AtEveryCitekey{\ifciteseen{\defcounter{maxnames}{2}}{\defcounter{maxnames}{4}}}
+
+\makeatother
+\renewcommand*{\nameyeardelim}{\addcomma\space} % Przecinek po autorze
+
+
+\input{_settings.tex} % load additional variables
+
+\begin{document}    
+    \newgeometry{margin=2.5cm}
+    \input{_title-page.tex}
+    \fontsize{12bp}{14.4bp}\selectfont
+    \newgeometry{inner=3cm,outer=2cm,top=2cm,bottom=2cm}
+    \tableofcontents
+    
+    \input{chapters/00-introduction.tex}
+    \input{chapters/10-goal-scope.tex}
+    \input{chapters/20-description.tex}
+    \input{chapters/30-implementation.tex}
+    \input{chapters/40-summary.tex}
+    
+    
+    \printbibliography[title={Bibliografia}]
+
+\end{document}

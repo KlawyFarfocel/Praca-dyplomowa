@@ -1,0 +1,61 @@
+% ------------------------------
+% VARIABLES
+% ------------------------------
+\def\varAcademyPartI{Akademia Nauk Stosowanych}
+\def\varAcademyPartII{w Nowym Sączu}
+\def\varInstitute{Wydział Nauk Inżynieryjnych}
+\def\varTitle{Elektroniczny System Konsultacji Studenckich na Uczelni Wyższej}
+\def\varAuthor{Maciej Śmierciak}
+\def\varMajor{Informatyka}
+\def\varAlbumNumber{31283}
+\def\varSupervisor{Witold Przygoda}
+\def\varCity{Nowy Sącz}
+
+% ------------------------------
+% CUSTOM FONT SIZES
+% https://latextutorial.net/font-size-latex/
+% ------------------------------
+\newcommand\customnormalsize{\fontsize{12bp}{14.4bp}\selectfont}
+\newcommand\customlarge{\fontsize{14bp}{16.8bp}\selectfont}
+\newcommand\customLarge{\fontsize{16bp}{19.2bp}\selectfont}
+\newcommand\customLARGE{\fontsize{18bp}{21.6bp}\selectfont}
+
+
+% ------------------------------
+% THESIS CONFIGURATION
+% ------------------------------
+\graphicspath{{images/}} % specify path to images
+\setmainfont{Times New Roman} % set `Times New Roman` font
+\linespread{1.25} % Line spacing
+\setlength{\parskip}{12pt plus 6pt minus 4pt} % Paragraph spacing
+\setlength{\parindent}{0.75cm} % Indentation
+%\pagestyle{plain} % Page numbering
+
+\pagestyle{fancy}
+\fancyhf{} % Start with clearing everything in the header and footer
+% Set the right side of the footer to be the page number
+\fancyfoot[R]{\thepage}
+\fancypagestyle{plain}{%
+    \renewcommand{\headrulewidth}{0pt}%
+    \fancyhf{}%
+    \fancyfoot[R]{\thepage}%
+}
+
+\titleformat{\chapter}[block]{\bfseries}{\customLarge{\thechapter.}}{.5em}{\customLarge}
+\titleformat{\section}[block]{\bfseries}{\customlarge{\thesection.}}{.5em}{\customlarge}
+\titlespacing*{\chapter}{0pt}{12pt}{12pt}
+\titlespacing*{\section}{0pt}{6pt}{6pt}
+
+\usepackage{ragged2e}
+\justifying % Text justification
+
+\setcounter{tocdepth}{2} % Table of contents depth
+\hypersetup{ % Hyperlinks/Metadata setup
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={\varTitle - \varAuthor},
+    pdfsubject={\varTitle},
+    pdfauthor={\varAuthor},
+}
